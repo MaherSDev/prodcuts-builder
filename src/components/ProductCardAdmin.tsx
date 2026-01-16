@@ -9,6 +9,7 @@ interface IProps {
 	setProductToEdit: (product: IProduct) => void;
 	openEditModal: () => void;
 	setProductToEditIdx: (value: number) => void;
+  openDeleteModal: () => void;
 }
 
 const ProductCardAdmin = ({ product, setProductToEdit, openEditModal, idx, setProductToEditIdx }: IProps) => {
@@ -22,6 +23,10 @@ const ProductCardAdmin = ({ product, setProductToEdit, openEditModal, idx, setPr
 		openEditModal()
 		setProductToEditIdx(idx)
 	}
+
+  const onDelete = () => {
+    console.log(idx);
+  }
 	
   return (
     <div className="shadow-shadowBottom rounded-2xl px-2 pb-2 flex flex-col gap-y-2 bg-yellow-50 text-center justify-between">
@@ -51,7 +56,7 @@ const ProductCardAdmin = ({ product, setProductToEdit, openEditModal, idx, setPr
           <Button className="bg-blue-600 flex-1" width="w-full" onClick={onEdit}>
             Edit
           </Button>
-          <Button className="bg-red-600 flex-1" width="w-full">
+          <Button className="bg-red-600 flex-1" width="w-full" onClick={onDelete}>
             Delete
           </Button>
         </div>

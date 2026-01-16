@@ -44,6 +44,8 @@ function App() {
   const closeModal = (): void => setIsOpen(false);
   const openEditModal = (): void => setIsOpenEdit(true);
   const closeEditModal = (): void => setIsOpenEdit(false);
+  const openDeleteModal = (): void => setIsOpenEdit(true);
+  const closeDeleteModal = (): void => setIsOpenEdit(true);
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -137,6 +139,7 @@ function App() {
       openEditModal={openEditModal}
       idx={idx}
       setProductToEditIdx={setProductToEditIdx}
+      openDeleteModal={openDeleteModal}
     />
   ));
   const renderFormList = formInputsList.map((input) => (
@@ -252,6 +255,31 @@ function App() {
               </Button>
             </div>
           </form>
+        </Modal>
+        {/* Delete PRODUCT MODAL */}
+        <Modal
+          isOpen={isOpenEdit}
+          closeModal={closeEditModal}
+          title="Edit This Product"
+        >
+
+            <div className="flex flex-wrap items-center space-x-3 gap-y-2">
+              <Button
+                className="bg-designColor hover:bg-hoverColor flex-1"
+                width="w-full"
+                type="submit"
+              >
+                submit
+              </Button>
+              <Button
+                className="bg-gray-400 hover:bg-gray-600 flex-1"
+                width="w-full"
+                type="button"
+                onClick={closeEditModal}
+              >
+                cancel
+              </Button>
+            </div>
         </Modal>
       </main>
     </>
