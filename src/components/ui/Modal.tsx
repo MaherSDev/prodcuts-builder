@@ -18,7 +18,7 @@ const Modal = ({isOpen, closeModal, title, children}) => {
         className="relative h-screen focus:outline-none"
         onClose={closeModal}
       >
-				<DialogBackdrop className="fixed inset-0 bg-black/30" />
+				<DialogBackdrop className="fixed inset-0 bg-black/20 backdrop-blur-xs" />
         <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
           <div className="flex min-h-full items-center justify-center p-4">
             <DialogPanel

@@ -5,29 +5,37 @@ import Image from "./Image";
 
 interface IProps {
   product: IProduct;
-	idx: number;
-	setProductToEdit: (product: IProduct) => void;
-	openEditModal: () => void;
-	setProductToEditIdx: (value: number) => void;
+  idx: number;
+  setProductToEdit: (product: IProduct) => void;
+  openEditModal: () => void;
+  setProductToEditIdx: (value: number) => void;
   openDeleteModal: () => void;
 }
 
-const ProductCardAdmin = ({ product, setProductToEdit, openEditModal, idx, setProductToEditIdx }: IProps) => {
+const ProductCardAdmin = ({
+  product,
+  setProductToEdit,
+  openEditModal,
+  idx,
+  setProductToEditIdx,
+  openDeleteModal,
+}: IProps) => {
   const { title, description, imageURL, price, category } = product;
 
-	/* ----- STATE ----- */
+  /* ----- STATE ----- */
 
-	/* ----- HANDLERS ----- */
-	const onEdit = () => {
-		setProductToEdit(product)
-		openEditModal()
-		setProductToEditIdx(idx)
-	}
+  /* ----- HANDLERS ----- */
+  const onEdit = () => {
+    setProductToEdit(product);
+    openEditModal();
+    setProductToEditIdx(idx);
+  };
 
   const onDelete = () => {
-    console.log(idx);
-  }
-	
+		setProductToEdit(product)
+    openDeleteModal();
+  };
+
   return (
     <div className="shadow-shadowBottom rounded-2xl px-2 pb-2 flex flex-col gap-y-2 bg-yellow-50 text-center justify-between">
       <div>
@@ -53,10 +61,18 @@ const ProductCardAdmin = ({ product, setProductToEdit, openEditModal, idx, setPr
           </button>
         </div>
         <div className="buttons flex flex-wrap justify-between gap-2 mt-2">
-          <Button className="bg-blue-600 flex-1" width="w-full" onClick={onEdit}>
+          <Button
+            className="bg-blue-600 flex-1"
+            width="w-full"
+            onClick={onEdit}
+          >
             Edit
           </Button>
-          <Button className="bg-red-600 flex-1" width="w-full" onClick={onDelete}>
+          <Button
+            className="bg-red-600 flex-1"
+            width="w-full"
+            onClick={onDelete}
+          >
             Delete
           </Button>
         </div>
