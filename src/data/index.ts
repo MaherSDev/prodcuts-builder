@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import type{ ICategory, IFormInput, IProduct } from "../interfaces";
+import type { ICategory, IFormInput, IProduct } from "../interfaces";
 
 export const productList: IProduct[] = [
   {
@@ -7,25 +7,12 @@ export const productList: IProduct[] = [
     title: "Chocolate Milkshake",
     description:
       "Milk, Vanilla Ice Cream Chocolate, Emulsifier, Vanilla Flavour, VegetablenGums, Colour...",
-    imageURL:
-      "https://api.mahersdev.com/images/Chocolate%20Milkshake.png",
+    imageURL: "https://api.mahersdev.com/images/Chocolate%20Milkshake.png",
     price: "10",
-    addFlavors: [
-      "#A31ACB",
-      "#FF6E31",
-      "#3C2A21",
-      "#CB1C8D",
-      "#645CBB",
-      "#FF0032",
-      "#820000",
-      "#13005A",
-      "#1F8A70",
-      "#84D2C5",
-    ],
+    addFlavors: [],
     category: {
       name: "Cold Drinks",
-      imageURL:
-        "https://api.mahersdev.com/images/Chocolate%20Milkshake.png",
+      imageURL: "https://api.mahersdev.com/images/Chocolate%20Milkshake.png",
     },
   },
   {
@@ -36,11 +23,10 @@ export const productList: IProduct[] = [
     imageURL:
       "https://api.mahersdev.com/images/Festive%20White%20Choc%20&%20Spice.png",
     price: "15",
-    addFlavors: ["#FF0032", "#2563eb", "#FF6E31"],
+    addFlavors: [],
     category: {
       name: "Cold Drinks",
-      imageURL:
-        "https://api.mahersdev.com/images/Chocolate%20Milkshake.png",
+      imageURL: "https://api.mahersdev.com/images/Chocolate%20Milkshake.png",
     },
   },
   {
@@ -51,7 +37,7 @@ export const productList: IProduct[] = [
     imageURL:
       "https://api.mahersdev.com/images/Ham,%20Cheese%20&%20Tomato%20Muffin.png",
     price: "20",
-    addFlavors: ["#A31ACB", "#3C2A21", "#1F8A70", "#820000", "#FF0032"],
+    addFlavors: [],
     category: {
       name: "cakes",
       imageURL:
@@ -63,8 +49,7 @@ export const productList: IProduct[] = [
     title: "Churro Muffin",
     description:
       "Muffin (37.6%) [WHEAT Flour(WHEAT Flour, Vitamins(Thiamin, Folate)), Sugar, SOY Flour, EGG Powder, MILK Solids, Raising Agents(500, 341, 450), WHEAT Bran, WHEAT Germ, Humectant(420), Flavour, Emulsifier(481)",
-    imageURL:
-      "https://api.mahersdev.com/images/New-Churro-Muffin.png",
+    imageURL: "https://api.mahersdev.com/images/New-Churro-Muffin.png",
     price: "25",
     addFlavors: [],
     category: {
@@ -81,18 +66,7 @@ export const productList: IProduct[] = [
     imageURL:
       "https://muffinbreak.com.au/wp-content/uploads/2024/08/LEMON-RASPBERRY-LOAF-angled-01.png",
     price: "25",
-    addFlavors: [
-      "#A31ACB",
-      "#FF6E31",
-      "#3C2A21",
-      "#CB1C8D",
-      "#645CBB",
-      "#FF0032",
-      "#820000",
-      "#13005A",
-      "#1F8A70",
-      "#84D2C5",
-    ],
+    addFlavors: [],
     category: {
       name: "cakes",
       imageURL:
@@ -102,12 +76,11 @@ export const productList: IProduct[] = [
   {
     id: uuid(),
     title: "Classic Waffle",
-    description:
-      "Large Piece Waffle Served With Butter And Maple Syrup",
+    description: "Large Piece Waffle Served With Butter And Maple Syrup",
     imageURL:
       "https://www.waffly.sa/web/image/product.product/11942/image_1024/Classic%20Waffle?unique=163307e",
     price: "30",
-    addFlavors: ["#FF0032", "#2563eb", "#FF6E31"],
+    addFlavors: [],
     category: {
       name: "waffles",
       imageURL:
@@ -117,12 +90,11 @@ export const productList: IProduct[] = [
   {
     id: uuid(),
     title: "Double Fruit Waffle",
-    description:
-      "Large Piece Waffle Served With seasonal fruits And Chocolate",
+    description: "Large Piece Waffle Served With seasonal fruits And Chocolate",
     imageURL:
       "https://www.waffly.sa/web/image/product.product/11943/image_1024/Double%20Fruit%20Waffle?unique=163307e",
     price: "40",
-    addFlavors: ["#A31ACB", "#3C2A21", "#1F8A70", "#820000", "#FF0032"],
+    addFlavors: [],
     category: {
       name: "waffles",
       imageURL:
@@ -158,26 +130,13 @@ export const formInputsList: IFormInput[] = [
   },
 ];
 
-export const addFlavors: string[] = [
-  "#a855f7",
-  "#2563eb",
-  "#84D2C5",
-  "#13005A",
-  "#A31ACB",
-  "#FF6E31",
-  "#3C2A21",
-  "#6C4AB6",
-  "#CB1C8D",
-  "#000000",
-  "#645CBB",
-];
+export const addFlavors: string[] = [];
 
 export const categories: ICategory[] = [
   {
     id: uuid(),
     name: "Cold Drinks",
-    imageURL:
-      "https://api.mahersdev.com/images/Chocolate%20Milkshake.png",
+    imageURL: "https://api.mahersdev.com/images/Chocolate%20Milkshake.png",
   },
   {
     id: uuid(),
