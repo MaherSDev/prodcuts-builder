@@ -209,8 +209,7 @@ function App() {
         htmlFor={input.id}
         className="mb-px text-sm font-medium text-gray-700"
       >
-        {/* {input.label} */}
-        product title
+        {input.label}
       </label>
       <Input
         type={input.type}
