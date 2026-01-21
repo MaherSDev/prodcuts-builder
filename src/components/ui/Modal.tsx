@@ -8,7 +8,7 @@ interface IProps {
 	children: ReactNode;
 }
 
-const Modal = ({isOpen, closeModal, title, children}) => {
+const Modal = ({isOpen, closeModal, title, children} : IProps) => {
 
   return (
     <>

@@ -45,10 +45,10 @@ function App() {
 
   /* ----- HANDLERS ----- */
   const openModal = (): void => setIsOpen(true);
-  const closeModal = (): void => setIsOpen(false);
-  const openEditModal = useCallback((): void => setIsOpenEdit(true), []);;
+  const closeModal = useCallback((): void => setIsOpen(false), []);
+  const openEditModal = useCallback((): void => setIsOpenEdit(true), []);
   const closeEditModal = (): void => setIsOpenEdit(false);
-  const openDeleteModal = useCallback((): void => setIsOpenDelete(true), []);;
+  const openDeleteModal = useCallback((): void => setIsOpenDelete(true), []);
   const closeDeleteModal = (): void => setIsOpenDelete(false)
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
