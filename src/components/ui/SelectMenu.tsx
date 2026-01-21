@@ -6,6 +6,7 @@ import {
   ListboxOption,
   ListboxOptions,
 } from "@headlessui/react";
+import { memo } from "react";
 import { ChevronUpDownIcon } from "@heroicons/react/16/solid";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import { categories } from "../../data";
@@ -70,4 +71,4 @@ const SelectMenu = ({ selected, setSelected }: IProps) => {
   );
 };
 
-export default SelectMenu;
+export default memo(SelectMenu);
