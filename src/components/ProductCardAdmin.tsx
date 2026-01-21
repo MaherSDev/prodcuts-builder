@@ -2,6 +2,7 @@ import type { IProduct } from "../interfaces";
 import { txtSlicer } from "../utils/functions";
 import Button from "./ui/Button";
 import Image from "./Image";
+import { memo } from "react";
 
 interface IProps {
   product: IProduct;
@@ -81,4 +82,4 @@ const ProductCardAdmin = ({
   );
 };
 
-export default ProductCardAdmin;
+export default memo(ProductCardAdmin);

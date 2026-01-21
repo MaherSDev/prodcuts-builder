@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useCallback, useState, type FormEvent } from "react";
 import { v4 as uuid } from "uuid";
 import toast, { Toaster } from "react-hot-toast";
 // import ProductCard from "./components/ProductCardUI";
@@ -46,10 +46,10 @@ function App() {
   /* ----- HANDLERS ----- */
   const openModal = (): void => setIsOpen(true);
   const closeModal = (): void => setIsOpen(false);
-  const openEditModal = (): void => setIsOpenEdit(true);
+  const openEditModal = useCallback((): void => setIsOpenEdit(true), []);;
   const closeEditModal = (): void => setIsOpenEdit(false);
-  const openDeleteModal = (): void => setIsOpenDelete(true);
-  const closeDeleteModal = (): void => setIsOpenDelete(false);
+  const openDeleteModal = useCallback((): void => setIsOpenDelete(true), []);;
+  const closeDeleteModal = (): void => setIsOpenDelete(false)
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
