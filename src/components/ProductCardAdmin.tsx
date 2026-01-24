@@ -23,8 +23,6 @@ const ProductCardAdmin = ({
 }: IProps) => {
   const { title, description, imageURL, price, category } = product;
 
-  /* ----- STATE ----- */
-
   /* ----- HANDLERS ----- */
   const onEdit = () => {
     setProductToEdit(product);

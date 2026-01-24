@@ -49,19 +49,16 @@ function App() {
   const openEditModal = useCallback((): void => setIsOpenEdit(true), []);
   const closeEditModal = (): void => setIsOpenEdit(false);
   const openDeleteModal = useCallback((): void => setIsOpenDelete(true), []);
-  const closeDeleteModal = (): void => setIsOpenDelete(false)
+  const closeDeleteModal = (): void => setIsOpenDelete(false);
 
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setProduct({
-      ...product,
-      [name]: value,
-    });
-    setErrorsMsg({
-      ...errorsMsg,
-      [name]: "",
-    });
-  };
+  const onChangeHandler = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = e.target;
+      setProduct((prev) => ({ ...prev, [name]: value }));
+      setErrorsMsg((prev) => ({ ...prev, [name]: "" }));
+    },
+    [],
+  );
   const onChangeEditHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setProductToEdit({
@@ -155,7 +152,7 @@ function App() {
   const onDeleteHandler = () => {
     console.log(productToEdit.id);
     const filteredProducts = products.filter(
-      (product) => product.id !== productToEdit.id
+      (product) => product.id !== productToEdit.id,
     );
     closeDeleteModal();
     setProducts(filteredProducts);
